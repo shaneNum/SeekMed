@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+header {
+  background-color: #ff8da1;
+  box-shadow: 0 2px 5px rgba(105, 70, 70, 1);
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 1.5rem;
+  position: fixed;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.0rem;
+  flex-wrap: wrap;
+}
+
+.header-top h1{
+  font-size: 2rem;
+}
+
+.container-specialist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    column-gap: 230px;
+}
+
+.section-one{
+    display: flex;
+    border-style: solid;
+    border-color: #ff8da1;
+    border-width: 5px;
+    height: 350px;
+    width: 400px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.section-one button{
+    height: 40px;
+    width: 260px;
+    background-color: #ff8da1;
+    box-shadow: 0 2px 5px rgba(105, 70, 70, 1);
+    border-style: none;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.section-one button:hover, .section-two button:hover {
+  background-color: #e72851;
+}
+
+.section-two{
+    display: flex;
+    border-style: solid;
+    border-color: #ff8da1;
+    border-width: 5px;
+    height: 350px;
+    width: 400px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.section-two button{
+    height: 60px;
+    width: 260px;
+    background-color: #ff8da1;
+    box-shadow: 0 2px 5px rgba(105, 70, 70, 1);
+    border-style: none;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+
+.tablecontent
+{
+  padding-top: 5rem;
+}
+
+@media (max-width: 767px) {
+  .mobile-nav {
+    display: flex;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .header-top {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .header-top {
+    justify-content: flex-start;
+  }
+}
