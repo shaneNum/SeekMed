@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    padding-bottom: 60px;
+    }
+
+header {
+    background-color: #ff8da1;
+    box-shadow: 0 2px 5px rgba(105, 70, 70, 1);
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 1.5rem;
+    position: fixed;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.0rem;
+    flex-wrap: wrap;
+}
+
+.header-top h1{
+    font-size: 2rem;
+}
+
+.main-signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.signup-container {
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    margin: 50px auto;
+    border-style: solid;
+    border-color: #ff8da1;
+    border-width: 5px;
+    padding: 20px;
+}
+
+.signup-tabs {
+    display: flex;
+    justify-content: center;
+    top: -20px;
+    margin-bottom: 10px;
+}
+
+.signup-tab {
+    background-color: #E0E0E0;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.signup-tab.pressable {
+    background-color: #ff8da1;
+    box-shadow: 0 2px 5px rgba(105, 70, 70, 1);
+    color: white;
+}
+
+.signup-tab.pressable:hover  {
+    background-color: #e72851;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-button {
+    background-color: #ff8da1;
+    box-shadow: 0 2px 5px rgba(105, 70, 70, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+     background-color: #e72851;
+}
+
+.login-prompt {
+    margin-top: 15px;
+}
+
+.login-prompt a {
+    color: #e72851;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
