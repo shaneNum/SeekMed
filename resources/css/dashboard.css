@@ -34,7 +34,33 @@ header {
     font-size: 2rem;
 }
 
-.container{
+.desktop-nav {
+  display: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.desktop-nav span {
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav span.active,
+.desktop-nav span:hover {
+  background-color: transparent;
+  color: #e72851;
+}
+
+.top-nav {
+  display: none;
+}
+
+.dash-container{
     display: flex;
     justify-content: center;
     align-items: center;

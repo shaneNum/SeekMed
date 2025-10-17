@@ -10,13 +10,17 @@
 </head>
 <body>
     <header>
-    <div class="header-top">
-        <h1>SeekMed</h1>
-      </div>
-    </div>
+        <div class="header-top">
+            <h1>SeekMed</h1>
+            <nav class="top-nav desktop-nav">
+                <a href={{route('home')}}"><span>Home</span></a>
+                <span class="active">Dashboard</span>
+                <a href={{route('forum')}}"><span>Forum</span></a>
+            </nav>
+        </div>
     </header>
 
-    <section class="container">
+    <section class="dash-container">
         <div class="section-one">
             <a>Konsultasi Spesialis Tepercaya</a>
             <button class="buton-help">Sp. Mata</button>
