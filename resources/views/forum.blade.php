@@ -9,14 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <h1>SeekMed</h1>
-            <nav class="top-nav desktop-nav">
-                <a href={{route('home')}}"><span>Home</span></a>
-                <a href={{route('dashboard')}}"><span>Dashboard</span></a>
-                <span class="active">Forum</span>
-            </nav>
-        </div>
+        <x-nav/>
     </header>
 
     <main class="forum-container">
@@ -33,10 +26,6 @@
                     </div>
                 </div>
             </div>
-
-            @if (count($forumPost) === 0)
-            <p>No forum posts yet.</p>
-            @endif
         </div>
     </main>
 

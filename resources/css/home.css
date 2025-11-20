@@ -27,6 +27,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 2.0rem;
+  flex-wrap: wrap;
 }
 
 .header-top h1 {
@@ -34,6 +36,7 @@ header {
 }
 
 .desktop-nav {
+  flex: 1;
   display: none;
   gap: 1.5rem;
   align-items: center;
@@ -57,6 +60,24 @@ header {
 
 .desktop-nav a{
   text-decoration:none
+}
+
+.desktop-nav .profile-link {
+  margin-left: auto;
+  margin-right: 0;
+}
+.desktop-nav img{
+  height: clamp(30px, 4vw, 60px);
+  width: clamp(30px, 4vw, 60px);
+  border-radius: 50%;
+  object-fit: cover;
+  outline: 2px solid #232323;
+  margin-left: auto;
+  margin-right: 0;
+}
+.desktop-nav img:hover{
+  transform: scale(1.05);
+  transition: 0.15s;
 }
 
 .top-nav {
