@@ -5,31 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellcare Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="Dashboard.css"> 
     <title>Document</title>
 </head>
 <body>
-    <header>
-    <div class="header-top">
-        <h1>SeekMed</h1>
-      </div>
-    </div>
+    <header class="fixed-app-header">
+        <h1 class="results-title">SeekMed</h1>
     </header>
 
-    <section class="container">
-        <div class="section-one">
-            <a>Konsultasi Spesialis Tepercaya</a>
-            <button class="buton-help">Sp. Mata</button>
-            <button class="buton-help">Sp. Kulit</button>
-            <button class="buton-help">Sp. Penyakit Dalam</button>
-            <button class="buton-help">Sp. Kandungan</button>
+    <div class="main-content-wrapper"> 
+        <section class="container">
+            <div class="section-one">
+                <a>Konsultasi Spesialis Tepercaya</a>
+                <button class="buton-help">Sp. Mata</button>
+                <button class="buton-help">Sp. Kulit</button>
+                <button class="buton-help">Sp. Penyakit Dalam</button>
+                <button class="buton-help">Sp. Kandungan</button>
+            </div>
+            <div class="section-two">
+                <a>Kami Siap Membantu</a>
+                <button class="buton-help">Beli Asuransi Kesehatan</button>
+                <button class="buton-help">Konsultasi Dokter Online</button>
+                <button class="buton-help">Apoteker Terdekat</button>
+            </div>
+        </section>
+        
+        <div class="search-bar-container">
+            <form action="search_results.html" method="get">
+                <input type="text" id="main-search" name="q" placeholder="Cari Spesialis, Obat, atau Layanan..." list="search-suggestions">
+                
+                <datalist id="search-suggestions">
+                    <option value="Dokter Umum">
+                    <option value="Dokter Gigi">
+                    <option value="Spesialis Anak">
+                    <option value="Apoteker">
+                    <option value="Asuransi">
+                </datalist>
+
+            </form>
         </div>
-        <div class="section-two">
-            <a>Kami Siap Membantu</a>
-            <button class="buton-help">Beli Asuransi Kesehatan</button>
-            <button class="buton-help">Konsultasi Dokter Online</button>
-            <button class="buton-help">Apoteker Terdekat</button>
-        </div>
-    </section>
+    </div>
 </body>
 </html>

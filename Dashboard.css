@@ -34,6 +34,29 @@ header {
     font-size: 2rem;
 }
 
+.search-bar-container {
+            padding: 15px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #eee; 
+            text-align: center;
+            margin-top: 20px; 
+            width: 100%; 
+        }
+        .search-bar-container input[type="text"] {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px 15px;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .search-bar-container input[type="text"]:focus {
+            border-color: #ff8da1;
+            outline: none;
+        }
+   
 .container{
     display: flex;
     justify-content: center;
