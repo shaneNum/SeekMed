@@ -10,14 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
-            <h1>SeekMed</h1>
-            <nav class="top-nav desktop-nav">
-                <a href={{route('home')}}"><span>Home</span></a>
-                <span class="active">Dashboard</span>
-                <a href={{route('forum')}}"><span>Forum</span></a>
-            </nav>
-        </div>
+        <x-nav/>
     </header>
 
     <section class="dash-container">

@@ -7,17 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   @vite('resources/css/home.css')
   @vite('resources/js/analytics.js')
+  @livewireStyles
 </head>
 <body>
     <header>
-    <div class="header-top">
-        <h1>SeekMed</h1>
-        <nav class="top-nav desktop-nav">
-            <span class="active">Home</span>
-            <a href={{route('dashboard')}}"><span>Dashboard</span></a>
-            <a href={{route('forum')}}"><span>Forum</span></a>
-        </nav>
-    </div>
+        <x-nav/>
     </header>
 
     <main class="analytics-container">
@@ -46,8 +40,9 @@
             <canvas id="trafficChart"></canvas>
         </div>
     </div>
+    <livewire:search-user/>
     </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+    @livewireScripts
 </body>

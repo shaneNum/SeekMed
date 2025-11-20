@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'role_id',
+        'profile_picture',
         'email_verified_at',
     ];
 
@@ -50,5 +51,13 @@ class User extends Authenticatable
 
     public function role() {
         return $this->belongsTo(Role::class);
+    }
+
+    protected $appends = ['profile_picture_data'];
+
+    public function getProfilePictureDataAttribute() {
+        $raw = $this->attributes['profile_picture'];
+        if (is_null($raw)) return asset('duggo.gif');
+        return 'data:image/jpeg;base64,'.base64_encode($raw);
     }
 }

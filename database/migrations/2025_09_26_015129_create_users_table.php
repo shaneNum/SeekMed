@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->foreignId('role_id')->constrained('roles')
                 ->cascadeOnDelete();
+            $table->binary('profile_picture')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

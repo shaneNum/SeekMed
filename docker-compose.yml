@@ -1,0 +1,55 @@
+services:
+  seekmed:
+    build:
+      args:
+        user: seekmed
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: seekmed_image
+    container_name: seekmed_container
+    restart: unless-stopped
+    working_dir: /var/www
+    depends_on:
+      - seekmed_db
+    volumes:
+      - ./:/var/www
+    networks:
+      - seekmed_network
+    entrypoint: ["./start.sh"]
+
+  seekmed_webserver:
+    platform: linux/amd64
+    image: nginx:alpine
+    container_name: seekmed_webserver_container
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - seekmed
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - seekmed_network
+
+  seekmed_db:
+    image: mysql:latest
+    container_name: seekmed_db_container
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env.docker
+    networks:
+      - seekmed_network
+    volumes:
+      - seekmed_db_data:/var/lib/mysql
+
+volumes:
+  seekmed_db_data:
+    driver: local
+
+networks:
+  seekmed_network:
+    driver: bridge
