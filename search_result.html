@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="Dashboard.css">
+
+    <style>
+        .main-content-wrapper {
+            padding-top: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .search-query-display {
+            font-weight: bold;
+        }
+
+        .result-item {
+            border: 3px solid #ff8da1;
+            border-radius: 40px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .doctor-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 120px;
+            object-fit: cover;
+            border: 3px solid #ff8da1;
+            flex-shrink: 0;
+        }
+
+        .result-text h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .result-text p {
+            margin: 4px 0;
+        }
+
+        .detail {
+            color: #555;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="fixed-app-header">
+        <h1 class="results-title">Search Results</h1>
+    </header>
+
+    <div class="main-content-wrapper">
+
+        <p class="search-query-display" id="keyword"></p>
+
+        <div id="results">
+
+            <div class="result-item">
+                <img src="doctor1.jpg" alt="Foto Dokter" class="doctor-img">
+                <div class="result-text">
+                    <h2>Dr Andika</h2>
+                    <p>Spesialis Jantung</p>
+                    <p class="detail">Shift Senin Jumat 0800 1500</p>
+                    <p class="detail">Sudah menangani 1240 pasien</p>
+                    <p class="detail">Rating 4.9 dari 5</p>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <img src="doctor2.jpg" alt="Foto Dokter" class="doctor-img">
+                <div class="result-text">
+                    <h2>Dr Sari</h2>
+                    <p>Spesialis Kulit</p>
+                    <p class="detail">Shift Rabu Minggu 0900 2000</p>
+                    <p class="detail">Sudah menangani 880 pasien</p>
+                    <p class="detail">Rating 4.8 dari 5</p>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <img src="doctor3.jpg" alt="Foto Dokter" class="doctor-img">
+                <div class="result-text">
+                    <h2>Dr Rizky</h2>
+                    <p>Spesialis Anak</p>
+                    <p class="detail">Shift Senin Sabtu 0700 1600</p>
+                    <p class="detail">Sudah menangani 1520 pasien</p>
+                    <p class="detail">Rating 4.95 dari 5</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const keyword = urlParams.get("q");
+
+        if (keyword) {
+            document.getElementById("keyword").textContent = "Anda mencari: " + keyword;
+        } else {
+            document.getElementById("keyword").textContent = "Anda mencari: Semua dokter";
+        }
+    </script>
+
+</body>
+</html>
